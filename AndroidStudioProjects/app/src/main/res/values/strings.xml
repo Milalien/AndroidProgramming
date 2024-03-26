@@ -1,10 +1,14 @@
 <resources>
     <string name="app_name">Android_harjoitukset</string>
-    <string name="hello">hello</string>
-    <string name="startbtn">START</string>
-    <string name="gamebtn">GAME</string>
+    <string name="hello">Hello!</string>
+    <string name="startbtn">Hello</string>
+    <string name="gamebtn">START GAME</string>
     <string name="gameText">Game demo</string>
     <string name="playBtnDescrpt">Image button, click to find star</string>
     <string name="restartBtn">Restart game</string>
     <string name="lastScore">Last score:</string>
+    <string name="title_activity_main2" translatable="false">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

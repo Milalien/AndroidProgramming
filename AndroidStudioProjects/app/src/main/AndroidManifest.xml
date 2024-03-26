@@ -13,18 +13,21 @@
         android:theme="@style/Theme.Android_harjoitukset"
         tools:targetApi="31">
         <activity
-            android:name=".GameActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".MainActivity2"
+            android:exported="true"
+            android:label="@string/title_activity_main2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".GameActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2" />
+        
+
     </application>
 
 </manifest>
