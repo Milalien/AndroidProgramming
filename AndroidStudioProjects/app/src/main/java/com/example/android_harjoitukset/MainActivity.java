@@ -1,5 +1,6 @@
 package com.example.android_harjoitukset;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,8 +14,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String TAG = "MainActivity";
     private Button startButton;
-//private Button gameButton;
+    private Button gameButton;
+    private View helloTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,22 +31,38 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-
-        startButton = (Button) findViewById(R.id.startButton);
+        helloTextView = findViewById(R.id.hello);
+        helloTextView.setVisibility(View.VISIBLE);
+        startButton = findViewById(R.id.startButton);
         startButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 handleOnClickEvents(v);
 
             }
         });
+        gameButton = findViewById(R.id.gameButton);
+        gameButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                handleOnClickEvents(v);
+            }
+        });
     }
 
     private void handleOnClickEvents(View v) {
-        switch (v.getId()) {
-            case R.id.startButton:
-                Log.d("MainActivity", "User clicked the Start-button");
-                break;
-            default:
+        if (v.getId() == R.id.startButton) {
+            Log.i(TAG, "User clicked the Start-button");
+            if (helloTextView.getVisibility() == View.VISIBLE) {
+                helloTextView.setVisibility(View.INVISIBLE);
+            } else if (helloTextView.getVisibility() == View.INVISIBLE) {
+                helloTextView.setVisibility(View.VISIBLE);
+
+            }
+        } else if (v.getId() == R.id.gameButton) {
+            Log.i(TAG, "User clicked the Game-button");
+            Intent i = new Intent(this, GameActivity.class);
+
+            startActivity(i);
         }
+
     }
 }

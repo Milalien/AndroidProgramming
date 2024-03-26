@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android_harjoitukset</string>
+    <string name="hello">Terve</string>
+    <string name="startbtn">ALOITA</string>
+    <string name="gamebtn">PELAA</string>
+    <string name="gameText">Peli demo</string>
+    <string name="playBtnDescrpt">Kuva-nappi, klikkaa löytääksesi tähden</string>
+    <string name="restartBtn">Aloita peli alusta</string>
+    <string name="lastScore">Edellinen tulos:</string>
+
+</resources>
