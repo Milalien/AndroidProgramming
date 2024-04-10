@@ -11,6 +11,10 @@
     <string name="title_home">Koti</string>
     <string name="title_dashboard">Aloitussivu</string>
     <string name="title_notifications">Ilmoitukset</string>
+    <string name="locationTitle">Sijainti</string>
+    <string name="mapBtn">Näytä kartalla</string>
+    <string name="apmTextOn">Lentokonetila PÄÄLLÄ</string>
+    <string name="apmTextOff">Lentokonetila POIS PÄÄLTÄ</string>
 
 
 </resources>

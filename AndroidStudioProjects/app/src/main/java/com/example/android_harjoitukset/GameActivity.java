@@ -109,7 +109,6 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void handleOnClickEvents(View v) {
-        score -= tries;
         tries += 1;
         animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
         int btnIndex;
@@ -121,6 +120,7 @@ public class GameActivity extends AppCompatActivity {
                 playBtn1.setImageResource(R.drawable.darkstar);
                 playBtn1.setBackgroundColor(Color.WHITE);
                 playBtn1.setVisibility(View.VISIBLE);
+                score -= tries;
                 putValue(KEY_HS, score);
             }
         } else if (v.getId() == R.id.playBtn2) {
@@ -131,6 +131,7 @@ public class GameActivity extends AppCompatActivity {
                 playBtn2.setImageResource(R.drawable.darkstar);
                 playBtn2.setBackgroundColor(Color.WHITE);
                 playBtn2.setVisibility(View.VISIBLE);
+                score -= tries;
                 putValue(KEY_HS, score);
             }
         } else if (v.getId() == R.id.playBtn3) {
@@ -141,6 +142,7 @@ public class GameActivity extends AppCompatActivity {
                 playBtn3.setImageResource(R.drawable.darkstar);
                 playBtn3.setBackgroundColor(Color.WHITE);
                 playBtn3.setVisibility(View.VISIBLE);
+                score -= tries;
                 putValue(KEY_HS, score);
             }
         } else if (v.getId() == R.id.playBtn4) {
@@ -151,6 +153,7 @@ public class GameActivity extends AppCompatActivity {
                 playBtn4.setImageResource(R.drawable.darkstar);
                 playBtn4.setBackgroundColor(Color.WHITE);
                 playBtn4.setVisibility(View.VISIBLE);
+                score -= tries;
                 putValue(KEY_HS, score);
             }
         } else if (v.getId() == R.id.restartBtn) {

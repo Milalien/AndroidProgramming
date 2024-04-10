@@ -11,4 +11,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="locationTitle">Location</string>
+    <string name="mapBtn">Show on map</string>
+    <string name="apmTextOn">Airplane mode ON</string>
+    <string name="apmTextOff">Airplane mode OFF</string>
+
 </resources>
