@@ -15,5 +15,9 @@
     <string name="mapBtn">Show on map</string>
     <string name="apmTextOn">Airplane mode ON</string>
     <string name="apmTextOff">Airplane mode OFF</string>
+    <string name="timerStartText">START</string>
+    <string name="timerPauseText">PAUSE</string>
+    <string name="timerStopText">STOP</string>
+    <string name="timerEndText">TIME\'S UP</string>
 
 </resources>

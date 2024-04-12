@@ -4,7 +4,7 @@ import androidx.datastore.preferences.core.Preferences;
 import androidx.datastore.rxjava3.RxDataStore;
 
 public class DataStoreSingleton {
-    RxDataStore<Preferences> datastore;
+    private RxDataStore<Preferences> datastore;
     private static final DataStoreSingleton ourInstance = new DataStoreSingleton();
 
     public static DataStoreSingleton getInstance() {

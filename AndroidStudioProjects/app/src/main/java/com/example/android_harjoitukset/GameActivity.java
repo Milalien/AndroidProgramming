@@ -30,7 +30,7 @@ import io.reactivex.rxjava3.core.Single;
 
 public class GameActivity extends AppCompatActivity {
 
-    public static final String TAG = "GameActivity";
+    private static final String TAG = "GameActivity";
     private int rndInt;
     private int score;
     private int tries;
@@ -41,14 +41,14 @@ public class GameActivity extends AppCompatActivity {
     private ImageButton playBtn4;
     private FloatingActionButton restartBtn;
 
-    public Toolbar toolbar;
-    TextView scoreValue;
-    RxDataStore<Preferences> dataStore;
+    private Toolbar toolbar;
+    private TextView scoreValue;
+    private RxDataStore<Preferences> dataStore;
 
-    Preferences.Key<Integer> KEY_HS;
+    private Preferences.Key<Integer> KEY_HS;
 
-    Random rand = new Random();
-    Animation animation;
+    private Random rand;
+    private Animation animation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,7 @@ public class GameActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        rand = new Random();
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();

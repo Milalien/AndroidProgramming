@@ -75,7 +75,7 @@ public class DashboardFragment extends Fragment implements LocationListener {
     @Override
     public void onResume() {
         super.onResume();
-        
+
         if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             /* Log.e(TAG, "Permission denied");
             String[] permissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION};
@@ -143,6 +143,7 @@ public class DashboardFragment extends Fragment implements LocationListener {
     private String getAddress(Location location) {
         geocoder = new Geocoder(getContext(), Locale.getDefault());
 
+        currentLocation = "Address not available";
 
         try {
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);

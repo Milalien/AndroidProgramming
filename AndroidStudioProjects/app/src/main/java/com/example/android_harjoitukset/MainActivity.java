@@ -13,12 +13,12 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.android_harjoitukset.databinding.ActivityMain2Binding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
 
     private ActivityMain2Binding binding;
-    ApmReceiver apmBr;
-    IntentFilter filter;
+    private ApmReceiver apmBr;
+    private IntentFilter filter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

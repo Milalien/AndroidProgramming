@@ -2,8 +2,11 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Android_harjoitukset" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/darkpink</item>
+        <item name="android:textColor">@color/black</item>
+
     </style>
+
 
     <style name="Theme.Android_harjoitukset" parent="Base.Theme.Android_harjoitukset" />
 </resources>

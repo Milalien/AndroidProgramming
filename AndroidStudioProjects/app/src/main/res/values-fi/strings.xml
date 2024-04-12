@@ -15,6 +15,10 @@
     <string name="mapBtn">Näytä kartalla</string>
     <string name="apmTextOn">Lentokonetila PÄÄLLÄ</string>
     <string name="apmTextOff">Lentokonetila POIS PÄÄLTÄ</string>
+    <string name="timerStopText">LOPETA</string>
+    <string name="timerStartText">KÄYNNISTÄ</string>
+    <string name="timerPauseText">TAUKO</string>
+    <string name="timerEndText">AIKA LOPPU</string>
 
 
 </resources>
