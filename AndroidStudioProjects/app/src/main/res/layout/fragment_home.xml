@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/galaxy"
-        android:layout_width="wrap_content"
-        android:layout_height="283dp"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
         android:src="@drawable/galaxy2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,33 +23,62 @@
         android:layout_width="155dp"
         android:layout_height="75dp"
         android:autoSizeTextType="uniform"
-        android:textAlignment="center"
         android:text="@string/hello"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/galaxy"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintVertical_bias="0.067" />
 
-    <Button
-        android:id="@+id/startButton"
-        android:layout_width="118dp"
-        android:layout_height="70dp"
-        android:text="@string/startbtn"
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.204"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hello" />
+        app:layout_constraintTop_toBottomOf="@+id/galaxy"
+        app:layout_constraintVertical_bias="0.650"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/searchbtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/searchText"
+        app:layout_constraintTop_toBottomOf="@+id/galaxy"
+        app:layout_constraintVertical_bias="0.650" />
+
+    <Button
+        android:id="@+id/helloButton"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="@string/hellobtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hello"
+        app:layout_constraintVertical_bias="0.219" />
 
     <Button
         android:id="@+id/gameButton"
-        android:layout_width="118dp"
+        android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:text="@string/gamebtn"
-        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hello" />
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toEndOf="@+id/helloButton"
+        app:layout_constraintTop_toBottomOf="@+id/hello"
+        app:layout_constraintVertical_bias="0.219" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

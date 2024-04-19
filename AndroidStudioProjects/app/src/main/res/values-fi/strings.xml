@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">Android_harjoitukset</string>
     <string name="hello">Hei!</string>
-    <string name="startbtn">Tervehdys</string>
     <string name="gamebtn">ALOITA PELI</string>
     <string name="gameText">Peli demo</string>
     <string name="playBtnDescrpt">Kuva-nappi, klikkaa löytääksesi tähden</string>
@@ -19,6 +18,12 @@
     <string name="timerStartText">KÄYNNISTÄ</string>
     <string name="timerPauseText">TAUKO</string>
     <string name="timerEndText">AIKA LOPPU</string>
+    <string name="searchbtn">HAE</string>
+    <string name="hellobtn">TERVEHDYS</string>
+    <string name="regDateText">"Rekisteröinti pvm: "</string>
+    <string name="compFormText">"Yhtiömuoto: "</string>
+    <string name="comIdText">"Y-tunnus: "</string>
+    <string name="search_title">YTJ-rajapinta haku</string>
 
 
 </resources>

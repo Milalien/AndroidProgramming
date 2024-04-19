@@ -1,4 +1,4 @@
-package com.example.android_harjoitukset;
+package com.example.android_harjoitukset.utils;
 
 import androidx.datastore.preferences.core.Preferences;
 import androidx.datastore.rxjava3.RxDataStore;

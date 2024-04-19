@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Android_harjoitukset</string>
     <string name="hello">Hello!</string>
-    <string name="startbtn">Hello</string>
+    <string name="hellobtn">HELLO</string>
     <string name="gamebtn">START GAME</string>
     <string name="gameText">Game demo</string>
     <string name="playBtnDescrpt">Image button, click to find star</string>
@@ -19,5 +19,10 @@
     <string name="timerPauseText">PAUSE</string>
     <string name="timerStopText">STOP</string>
     <string name="timerEndText">TIME\'S UP</string>
+    <string name="searchbtn">SEARCH</string>
+    <string name="regDateText">Registration date: </string>
+    <string name="compFormText">Company form: </string>
+    <string name="comIdText">Business id: </string>
+    <string name="search_title">YTJ-interface search</string>
 
 </resources>

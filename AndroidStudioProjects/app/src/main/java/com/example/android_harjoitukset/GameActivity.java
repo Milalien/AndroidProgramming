@@ -21,6 +21,7 @@ import androidx.datastore.preferences.core.PreferencesKeys;
 import androidx.datastore.preferences.rxjava3.RxPreferenceDataStoreBuilder;
 import androidx.datastore.rxjava3.RxDataStore;
 
+import com.example.android_harjoitukset.utils.DataStoreSingleton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Arrays;
