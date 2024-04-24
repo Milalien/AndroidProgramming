@@ -73,7 +73,9 @@ public class ExamActivity extends AppCompatActivity {
                     input = 0;
                     currencyResult.setText(null);
                 } else {
-                    input = Double.parseDouble(currencyInput.getText().toString());
+                    String inputText = currencyInput.getText().toString();
+                    inputText = inputText.replaceAll(",", ".");
+                    input = Double.parseDouble(inputText);
                     currencyResult.setError(null);
                     convert(input);
                 }
