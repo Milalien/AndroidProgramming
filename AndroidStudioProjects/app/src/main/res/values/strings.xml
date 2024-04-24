@@ -2,7 +2,7 @@
     <string name="app_name">Android_harjoitukset</string>
     <string name="hello">Hello!</string>
     <string name="hellobtn">HELLO</string>
-    <string name="gamebtn">START GAME</string>
+    <string name="gamebtn">GAME</string>
     <string name="gameText">Game demo</string>
     <string name="playBtnDescrpt">Image button, click to find star</string>
     <string name="restartBtn">Restart game</string>
@@ -24,5 +24,12 @@
     <string name="compFormText">Company form: </string>
     <string name="comIdText">Business id: </string>
     <string name="search_title">YTJ-interface search</string>
+    <string name="label">Input value and select currency</string>
+    <string name="currencyText">Euro tourist currency converter</string>
+    <string name="SEK">SEK</string>
+    <string name="NOK">NOK</string>
+    <string name="DKK">DKK</string>
+    <string name="curError">Converting not possible</string>
+    <string name="exambtn">EXAM</string>
 
 </resources>

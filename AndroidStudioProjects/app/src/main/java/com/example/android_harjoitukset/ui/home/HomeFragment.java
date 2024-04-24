@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.android_harjoitukset.ExamActivity;
 import com.example.android_harjoitukset.GameActivity;
 import com.example.android_harjoitukset.R;
 import com.example.android_harjoitukset.SearchActivity;
@@ -25,6 +26,8 @@ public class HomeFragment extends Fragment {
     private Button helloButton;
     private Button gameButton;
     private Button searchButton;
+    private Button examButton;
+
     private EditText searchInput;
 
     private View helloTextView;
@@ -44,10 +47,13 @@ public class HomeFragment extends Fragment {
         helloButton = binding.helloButton;
         gameButton = binding.gameButton;
         searchButton = binding.searchButton;
+        examButton = binding.examButton;
 
         helloButton.setOnClickListener(this::handleOnClickEvents);
         gameButton.setOnClickListener(this::handleOnClickEvents);
         searchButton.setOnClickListener(this::handleOnClickEvents);
+        examButton.setOnClickListener(this::handleOnClickEvents);
+
 
         searchInput = binding.searchText;
 
@@ -75,7 +81,12 @@ public class HomeFragment extends Fragment {
             String searchText = searchInput.getText().toString();
             i.putExtra("searchTxt", searchText);
             startActivity(i);
+        } else if (v.getId() == R.id.examButton) {
+            Log.i(TAG, "User clicked the Exam-button");
+            Intent i = new Intent(getActivity(), ExamActivity.class);
+            startActivity(i);
         }
+
     }
 
     @Override

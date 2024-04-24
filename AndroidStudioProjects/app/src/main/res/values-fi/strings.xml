@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Android_harjoitukset</string>
     <string name="hello">Hei!</string>
-    <string name="gamebtn">ALOITA PELI</string>
+    <string name="gamebtn">PELI</string>
     <string name="gameText">Peli demo</string>
     <string name="playBtnDescrpt">Kuva-nappi, klikkaa löytääksesi tähden</string>
     <string name="restartBtn">Aloita peli alusta</string>
@@ -24,6 +24,13 @@
     <string name="compFormText">"Yhtiömuoto: "</string>
     <string name="comIdText">"Y-tunnus: "</string>
     <string name="search_title">YTJ-rajapinta haku</string>
+    <string name="label">Syötä määrä ja valitse valuutta</string>
+    <string name="currencyText">Euroturistin valuuttamuunnin</string>
+    <string name="SEK">SEK</string>
+    <string name="NOK">NOK</string>
+    <string name="DKK">DKK</string>
+    <string name="curError">Valuutan muuntaminen ei onnistu</string>
+    <string name="exambtn">TENTTI</string>
 
 
 </resources>
