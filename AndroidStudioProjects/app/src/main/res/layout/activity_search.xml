@@ -31,7 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:paddingHorizontal="15dp" />
+        android:paddingHorizontal="15dp"
+        android:scrollbars="vertical" />
 
 
 </LinearLayout>

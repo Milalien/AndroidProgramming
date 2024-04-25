@@ -1,5 +1,6 @@
 package com.example.android_harjoitukset.utils;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,9 +44,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
             v.setOnClickListener(this);
         }
 
-        /**
-         * @param v The view that was clicked.
-         */
+
         @Override
         public void onClick(View v) {
 
@@ -92,28 +91,36 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
 
         return new Filter() {
             @Override
-            protected FilterResults performFiltering(CharSequence charSequence) {
-                String charString = charSequence.toString();
-                dataSetFiltered = new ArrayList<>();
-                if (charString.isEmpty()) {
-                    dataSetFiltered = FullList;
+            protected FilterResults performFiltering(CharSequence constraint) {
+
+                dataSetFiltered = new ArrayList<Item>();
+
+                if (constraint == null || constraint.length() == 0) {
+                    dataSetFiltered.addAll(FullList);
+                   
                 } else {
-                    String filterPattern = charString.toLowerCase().trim();
+                    String filterPattern = constraint.toString().toLowerCase().trim();
                     for (Item item : FullList) {
                         if (item.name.toLowerCase().contains(filterPattern)) {
                             dataSetFiltered.add(item);
+
+
                         }
                     }
+
                 }
                 FilterResults results = new FilterResults();
                 results.values = dataSetFiltered;
+
+
                 return results;
             }
 
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 dataSet.clear();
-                dataSet = (ArrayList<Item>) results.values;
+
+                dataSet.addAll((ArrayList<Item>) results.values);
                 notifyDataSetChanged();
             }
         };

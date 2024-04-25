@@ -67,6 +67,7 @@ public class GameActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
+
         playBtn1 = findViewById(R.id.playBtn1);
         playBtn2 = findViewById(R.id.playBtn2);
         playBtn3 = findViewById(R.id.playBtn3);
