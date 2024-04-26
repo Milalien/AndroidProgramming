@@ -92,6 +92,14 @@ public class SearchActivity extends AppCompatActivity {
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.options_menu, menu);
+        /* toolbar.inflateMenu(R.menu.options_menu);
+        toolbar.setOnMenuItemClickListener(
+            menuItem -> {
+            // Handle menuItem click.
+            return true;
+           });
+        */
+
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         MenuItem searchItem = menu.findItem(R.id.search);
         SearchView searchView = (SearchView) searchItem.getActionView();

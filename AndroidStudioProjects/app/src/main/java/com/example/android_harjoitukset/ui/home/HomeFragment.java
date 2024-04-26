@@ -63,7 +63,7 @@ public class HomeFragment extends Fragment {
 
     private void handleOnClickEvents(View v) {
         if (v.getId() == R.id.helloButton) {
-            Log.i(TAG, "User clicked the Start-button");
+            Log.i(TAG, "User clicked the Hello-button");
             if (helloTextView.getVisibility() == View.VISIBLE) {
                 helloTextView.setVisibility(View.INVISIBLE);
             } else if (helloTextView.getVisibility() == View.INVISIBLE) {
