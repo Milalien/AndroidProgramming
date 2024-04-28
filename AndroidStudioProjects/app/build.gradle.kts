@@ -1,3 +1,7 @@
+var versionMajor = 1
+var versionMinor = 2
+var versionPatch = 3
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -7,12 +11,13 @@ android {
     namespace = "com.example.android_harjoitukset"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.example.android_harjoitukset"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = versionMajor * 10000 + versionMinor * 100 + versionPatch
+        versionName = "${versionMajor}.${versionMinor}.${versionPatch}"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -21,9 +26,15 @@ android {
     }
 
     buildTypes {
+        debug {
+            versionNameSuffix = ".debug"
+            resValue("string","app_version", "${defaultConfig.versionName}${versionNameSuffix}")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            resValue("string","app_version", "${defaultConfig.versionName}")
+
         }
     }
     compileOptions {
