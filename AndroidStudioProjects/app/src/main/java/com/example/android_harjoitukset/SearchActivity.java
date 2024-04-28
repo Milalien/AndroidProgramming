@@ -31,6 +31,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.android_harjoitukset.utils.Item;
 import com.example.android_harjoitukset.utils.RecycleAdapter;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,7 +48,8 @@ public class SearchActivity extends AppCompatActivity {
     private RequestQueue requestQueue;
     private RecyclerView recyclerView;
     private RecycleAdapter adapter;
-    private ProgressBar progressBar;
+
+    public LinearProgressIndicator progressBar;
     private Toolbar toolbar;
 
     public String url = "https://avoindata.prh.fi/bis/v1?totalResults=false&maxResults=100&resultsFrom=0&name=xxx&companyRegistrationFrom=2000-01-01";
@@ -92,14 +95,6 @@ public class SearchActivity extends AppCompatActivity {
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.options_menu, menu);
-        /* toolbar.inflateMenu(R.menu.options_menu);
-        toolbar.setOnMenuItemClickListener(
-            menuItem -> {
-            // Handle menuItem click.
-            return true;
-           });
-        */
-
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         MenuItem searchItem = menu.findItem(R.id.search);
         SearchView searchView = (SearchView) searchItem.getActionView();
@@ -109,15 +104,16 @@ public class SearchActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                adapter.getFilter().filter(query);
-                Log.i(TAG, "SEARCHING: " + query);
+                
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String query) {
-
+                adapter.getFilter().filter(query);
+                Log.i(TAG, "SEARCHING: " + query);
                 return false;
+
             }
         });
         return true;
@@ -125,7 +121,9 @@ public class SearchActivity extends AppCompatActivity {
 
     private void retrieveJSON() {
 
-        progressBar.setVisibility(View.VISIBLE);
+        progressBar.show();
+
+
 
         requestQueue = Volley.newRequestQueue(this);
 
@@ -138,10 +136,11 @@ public class SearchActivity extends AppCompatActivity {
                         itemList = new ArrayList<Item>();
                         try {
                             JSONArray responseItems = response.getJSONArray("results");
-                            progressBar.setMax(responseItems.length());
+
+
 
                             for (int i = 0; i < responseItems.length(); i++) {
-                                //Log.i(TAG, responseItems.getString(i));
+
                                 Item item = new Item();
                                 JSONObject dataobj = responseItems.getJSONObject(i);
                                 item.setName(dataobj.getString("name"));
@@ -149,7 +148,9 @@ public class SearchActivity extends AppCompatActivity {
                                 item.setCompanyForm(dataobj.getString("companyForm"));
                                 item.setRegistrationDate(dataobj.getString("registrationDate"));
                                 itemList.add(item);
-                                progressBar.setProgress(i);
+
+
+
                             }
                         } catch (JSONException e) {
                             Log.e(TAG, "JsonobjectRequest error: " + e.getMessage());
@@ -165,7 +166,8 @@ public class SearchActivity extends AppCompatActivity {
                         if (error != null) {
                             Log.e(TAG, "prepareData: " + error.getMessage());
                         }
-                        progressBar.setVisibility(View.GONE);
+                        progressBar.hide();
+                        progressBar.setVisibilityAfterHide(View.INVISIBLE);
                     }
                 }
                 );

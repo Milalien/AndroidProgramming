@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
     android:paddingBottom="100dp"
     android:orientation="vertical">
 
@@ -15,15 +13,22 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:elevation="4dp" />
+        android:elevation="4dp"
+        />
 
-    <ProgressBar
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/progBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="5dp"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:trackColor="@color/lightpurple"
+        app:indicatorColor="@color/darkpink"
+        app:trackThickness="10dp"
+        app:indeterminateAnimationType="disjoint"
+        />
 
 
     <androidx.recyclerview.widget.RecyclerView

@@ -21,11 +21,11 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
     public static final String TAG = "RecycleAdapter";
 
     protected ArrayList<Item> dataSet;
-    protected ArrayList<Item> dataSetFiltered;
+
 
     protected ArrayList<Item> FullList;
 
-    static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         protected TextView tvName;
         protected TextView tvId;
@@ -57,8 +57,8 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
     }
 
     public RecycleAdapter(ArrayList<Item> itemList) {
-        dataSet = itemList;
-        FullList = itemList;
+        this.dataSet = itemList;
+        FullList = new ArrayList<>(itemList);
     }
 
 
@@ -82,7 +82,6 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
 
     @Override
     public int getItemCount() {
-
         return (dataSet == null) ? 0 : dataSet.size();
     }
 
@@ -93,7 +92,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
 
-                dataSetFiltered = new ArrayList<Item>();
+                ArrayList<Item> dataSetFiltered = new ArrayList<>();
 
                 if (constraint == null || constraint.length() == 0) {
                     dataSetFiltered.addAll(FullList);
@@ -103,16 +102,12 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
                     for (Item item : FullList) {
                         if (item.name.toLowerCase().contains(filterPattern)) {
                             dataSetFiltered.add(item);
-
-
                         }
                     }
 
                 }
                 FilterResults results = new FilterResults();
                 results.values = dataSetFiltered;
-
-
                 return results;
             }
 

@@ -23,7 +23,7 @@
     <string name="regDateText">Registration date: </string>
     <string name="compFormText">Company form: </string>
     <string name="comIdText">Business id: </string>
-    <string name="search_title">YTJ-interface search</string>
+    <string name="search_title">Search</string>
     <string name="label">Input value and select currency</string>
     <string name="currencyText">Euro tourist currency converter</string>
     <string name="SEK">SEK</string>

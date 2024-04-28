@@ -23,7 +23,7 @@
     <string name="regDateText">"Rekisteröinti pvm: "</string>
     <string name="compFormText">"Yhtiömuoto: "</string>
     <string name="comIdText">"Y-tunnus: "</string>
-    <string name="search_title">YTJ-rajapinta haku</string>
+    <string name="search_title">Haku</string>
     <string name="label">Syötä määrä ja valitse valuutta</string>
     <string name="currencyText">Euroturistin valuuttamuunnin</string>
     <string name="SEK">SEK</string>
