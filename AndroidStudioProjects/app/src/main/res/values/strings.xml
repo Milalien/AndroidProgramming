@@ -30,6 +30,6 @@
     <string name="NOK">NOK</string>
     <string name="DKK">DKK</string>
     <string name="curError">Converting not possible</string>
-    <string name="exambtn">EXAM</string>
+    <string name="exambtn">€ CONVERTER</string>
 
 </resources>

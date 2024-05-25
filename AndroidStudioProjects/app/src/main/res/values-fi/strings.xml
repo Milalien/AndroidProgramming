@@ -30,7 +30,7 @@
     <string name="NOK">NOK</string>
     <string name="DKK">DKK</string>
     <string name="curError">Valuutan muuntaminen ei onnistu</string>
-    <string name="exambtn">TENTTI</string>
+    <string name="exambtn">€ MUUNNIN</string>
 
 
 </resources>
