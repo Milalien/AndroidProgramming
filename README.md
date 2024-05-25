@@ -13,7 +13,7 @@ By pressing the button, the "Hello!" text changes to invisible.
 
 A small game where you try to find the hidden dark star under the cards. Saves the latest score.
 
-### EXAM
+### € CONVERTER
 
 Exam assignment, a simple currency convertor.
 Input amount in the preferred currency, choose the right one, and it calculates the value in euros.
