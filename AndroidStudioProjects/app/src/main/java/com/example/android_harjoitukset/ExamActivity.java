@@ -52,6 +52,7 @@ public class ExamActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         currencyLayout = findViewById(R.id.currencyInputLayout);
         currencyResult = findViewById(R.id.currencyResult);
